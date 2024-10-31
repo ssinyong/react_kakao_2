@@ -6,7 +6,7 @@ const AboutPage = lazy(() => import("../pages/AboutPage"))
 
 const LoginPage = lazy(() => import("../pages/member/LoginPage"))
 
-
+//손대기
 export const Loading = <div>Loading...</div>
 
 const mainRouter = createBrowserRouter([

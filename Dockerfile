@@ -19,6 +19,9 @@ RUN npm run build
 # 빌드된 정적 파일을 Nginx 서버로 제공하기 위해 Nginx 이미지를 사용합니다.
 FROM nginx:alpine
 
+# Nginx 설정 파일을 복사해 커스터마이징할 수 있습니다.
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # 빌드 단계에서 생성된 정적 파일을 Nginx의 기본 루트 디렉토리로 복사합니다.
 COPY --from=build /app/dist /usr/share/nginx/html
 
